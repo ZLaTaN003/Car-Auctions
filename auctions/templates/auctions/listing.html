@@ -1,0 +1,94 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="card">
+                <img class="card-img-top" src="{{auction.item_img.url}}" alt="Item Image">
+                <div class="card-body">
+                    <h5 class="card-title">Seller: {{ auction.theuser }}</h5>
+                    <h2 class="card-title">{{ auction.title }}</h2>
+                    <p class="card-text">Description: {{ auction.description }}</p>
+                    <p class="card-text">Current-Bid: ${{ auction.price }}  Bid :{% if auction.bids.last.bid_user  %}
+                        {{ auction.bids.last.bid_user }} has the highest bid placed
+                        {% else %}
+                        None
+                        {% endif %}</p>
+                    {% if not user.is_authenticated %}
+                    Create a New Account or Login to Start Bidding 
+                    <p><a class="btn btn-lg btn-primary" href="{% url 'register' %}">Register Here</a></p>
+                    
+
+
+                    {% endif %}
+                    {% if user.is_authenticated and auction.active %}
+                    {% if inwatch %}
+                    <p class="card-text">This Item is added to your Watchlist. Click Remove to Remove</p>
+                    <form method="POST" action="{% url 'removewatch' auction.id %}">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-danger">Remove from Watchlist</button>
+                    </form>
+                    {% else %}
+                    <p class="card-text">Click Add for Adding This item to Watchlist</p>
+                    <form method="POST" action="{% url 'addwatch' auction.id %}">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-primary">Add to Watchlist</button>
+                    </form>
+                    {% endif %}
+                    {% endif %}
+
+                    <div>
+                        <h6>Comments</h6>
+                        {% if user.is_authenticated and auction.active %}
+                        <form method="POST" action="{% url 'comment' auction.id %}">
+                            {% csrf_token %}
+                            <div class="input-group mb-3">
+                                <input type="text" name="mycomment" class="form-control" placeholder="Add a comment" required>
+                                <div class="input-group-append">
+                                    <button type="submit" class="btn btn-primary">Comment</button>
+                                </div>
+                            </div>
+                        </form>
+                        {% endif %}
+                        {% for mycomm in mycomments %}
+                        <div class="card my-2">
+                            <div class="card-body">
+                                <p>{{ mycomm.comment }}</p>
+                                <p class="text-muted"><strong>by {{ mycomm.commentor }} on {{ mycomm.date_created }}</strong></p>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                 
+                    {% if user.is_authenticated and auction.active %}
+                    <h6>Bids</h6>
+                    <form method="post">
+                        {% csrf_token %}
+                        {{ bid }}
+                        <button type="submit" class="btn btn-primary">Place Bid</button>
+                    </form>
+                    {% if error %}
+                    <p class="text-danger">{{ error }}</p>
+                    {% endif %}
+                    </br>
+                    {% if user.is_authenticated %}
+                    {% if iscreator and auction.active %}
+                    <form method="POST" action="{% url 'removeitem' auction.id %}">
+                        {% csrf_token %}
+                        <h6>Click Remove to End Auction</h6>
+                        <button type="submit" class="btn btn-danger">Remove</button>
+                    </form>
+                    {% endif %}
+                    {% endif %}
+                    {% endif %}
+                    
+                    {% if not auction.active %}
+                    <p class="text-success">{{ winner_message }}</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

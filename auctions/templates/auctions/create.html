@@ -1,0 +1,95 @@
+{% extends "auctions/layout.html" %}
+{% block csspart %}
+<style>
+.container {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+label {
+    text-align: right;
+    font-weight: bold;
+  }
+
+.form-group label {
+    padding-right: 10px;
+  }
+
+.form-group {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  .description-label {
+    vertical-align: top;
+  }
+
+.btn-create {
+    background-color: #007BFF;
+    color: green;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+  }
+
+.btn-create:hover {
+    background-color: #0056b3;
+  }
+ 
+</style>
+{% endblock %}
+{% block body %}
+  <div class="container">
+    <div class="form-container">
+      <h2 class="text-center">Create Auction</h2>
+      <h6 class="text-center">List Your Car!!</h6>
+
+      <form method="POST"  enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.media }}
+
+        <div class="form-group">
+          <label for="{{ form.title.id_for_label }}">Car:</label>
+          {{ form.title }}
+        </div>
+
+        <div class="form-group">
+          <label for="{{ form.description.id_for_label }}" class="description-label">Specifications:</label>
+          {{ form.description }}
+        </div>
+
+        <div class="form-group">
+          <label for="{{ form.price.id_for_label }}">Price:</label>
+          {{ form.price }}
+        </div>
+
+        <div class="form-group">
+          <label for="{{ form.category.id_for_label }}">Category:</label>
+          {{ form.category }}
+        </div>
+
+        <div class="form-group">
+          <label for="{{ form.item_img.id_for_label }}">Image URL:</label>
+          {{ form.item_img }}
+        </div>
+
+        <button type="submit" class="btn btn-create btn-block mybutton" style="background-color: #007BFF; color: #fff; border: none; border-radius: 5px; padding: 10px 20px; font-size: 18px; transition: background-color 0.3s ease;">Create</button>
+
+      </form>
+    </div>
+  </div>
+{% endblock %}

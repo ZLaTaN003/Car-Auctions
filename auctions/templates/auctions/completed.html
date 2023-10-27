@@ -1,0 +1,22 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+<div class="container">
+    <h1>Completed Auctions</h1>
+    <div class="row">
+        {% for auction in completed %}
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img class="card-img-top" src="{{ auction.item_img.url }}" >
+                    <div class="card-body">
+                        <h5 class="card-title">{{ auction.title }}</h5>
+                        <p class="card-text">{{ auction.description }}</p>
+                        <p class="card-text">Final Bid: ${{ auction.price }}</p>
+                        <p class="card-text">Winner: {{ auction.bids.last.bid_user }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
