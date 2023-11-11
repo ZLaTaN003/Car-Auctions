@@ -42,7 +42,7 @@ This project contains about 5 models and made use of all 3 relations OnetoOne On
 
 ## Files Content
 
-        -Modelform for Profile Section
+        Modelform for Profile Section
 
         -create view -The view Responsible for adding User details used in Cv
 
