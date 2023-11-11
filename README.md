@@ -42,20 +42,21 @@ This project contains about 5 models and made use of all 3 relations OnetoOne On
 
 ## Files Content
 
-Views.py
+-Views.py
         -Modelform for Profile Section
 
         -create view -The view Responsible for adding User details used in Cv
 
         -login,logout,register views
-
+        
         -profile view responsible for Profile section 
 
         -jobfromlink view responsible for server side api request to adzuna jobs api where i fetch the latest job openings
-
+        
         -cv This is the view where i create a Html template which i will later use in xhtml2pdf
 
         -cvtopdf This view converts the Template to Pdf Format
+
 
         -list This view is used to show the list of CV submited by various users
 
@@ -71,17 +72,12 @@ Views.py
 
 
 Models.py
-         User Model
-
-         Candidate model this is the model used for storing CV details of users
-
-         Profile Model This model is responsible for Profile details of Users
-
-         Section Model This model is responsible for creating different Fields or Teams that user can join
-
-         Like Model The model that helps users to like other users CV
-         
-         Signals Made Use of Django Signals to connect User and Profile Model
+         -User Model
+         -Candidate model this is the model used for storing CV details of users
+         -Profile Model This model is responsible for Profile details of Users 
+         -Section Model This model is responsible for creating different Fields or Teams that user can join
+         -Like Model The model that helps users to like other users CV
+         -Signals Made Use of Django Signals to connect User and Profile Model
 
 Registered Models with admin
 
