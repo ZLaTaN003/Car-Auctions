@@ -42,7 +42,8 @@ This project contains about 5 models and made use of all 3 relations OnetoOne On
 
 ## Files Content
 
--Views.py
+Views.py
+
 -Modelform for Profile Section
 
 -create view -The view Responsible for adding User details used in Cv
@@ -72,6 +73,7 @@ This project contains about 5 models and made use of all 3 relations OnetoOne On
 
 
 Models.py
+
 -User Model
 
 -Candidate model this is the model used for storing CV details of users
@@ -87,7 +89,7 @@ Models.py
 Registered Models with admin
 
 
-Urls.py 
+urls.py 
      contains routes for my app
 
 script.js
