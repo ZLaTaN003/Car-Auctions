@@ -40,10 +40,12 @@ In terms of Distinctivenes this project is entirely different from other project
   
 This project contains about 5 models and made use of all 3 relations OnetoOne OnetoMany and ManytoMany  i have made use of relation between the models to acheive various features like for example the upvote system and i also have made use js code  for client side manipulation in most of my template so the project is quite Complex
 
-## Files Conten
-Modelform for Profile Section
+## Files Content
 
- -create view -The view Responsible for adding User details used in Cv
+-Views.py
+-Modelform for Profile Section
+
+-create view -The view Responsible for adding User details used in Cv
 
 -login,logout,register views
         
@@ -56,26 +58,31 @@ Modelform for Profile Section
 -cvtopdf This view converts the Template to Pdf Format
 
 
-list This view is used to show the list of CV submited by various users
+-list This view is used to show the list of CV submited by various users
 
-likecv This endpoint allows to implement the like feature  in which users can upvote other users cv (made use of JsonResponse)
+-likecv This endpoint allows to implement the like feature  in which users can upvote other users cv (made use of JsonResponse)
 
-edit This view allows users to delete thier CV after they generated a pdf that they dont like
+-edit This view allows users to delete thier CV after they generated a pdf that they dont like
 
-sectionlist This is responsible for giving users a wide range of field teams which they can join
+-sectionlist This is responsible for giving users a wide range of field teams which they can join
 
-        join/leave section These views makes users able to join and leave sections
-        
-        sectionusers This section shows the list of users in each section
+-join/leave section These views makes users able to join and leave sections
+
+-sectionusers This section shows the list of users in each section
 
 
 Models.py
-         -User Model
-         -Candidate model this is the model used for storing CV details of users
-         -Profile Model This model is responsible for Profile details of Users 
-         -Section Model This model is responsible for creating different Fields or Teams that user can join
-         -Like Model The model that helps users to like other users CV
-         -Signals Made Use of Django Signals to connect User and Profile Model
+-User Model
+
+-Candidate model this is the model used for storing CV details of users
+
+-Profile Model This model is responsible for Profile details of Users 
+
+-Section Model This model is responsible for creating different Fields or Teams that user can join
+
+-Like Model The model that helps users to like other users CV
+
+-Signals Made Use of Django Signals to connect User and Profile Model
 
 Registered Models with admin
 
@@ -84,8 +91,8 @@ Urls.py
      contains routes for my app
 
 script.js
-  -Edit Feature in Profiles is Implemented through  javascript code here where i use dom manipulation for better user experience
-  -Custom Client Side Validation is made for Create Section
+ -Edit Feature in Profiles is Implemented through  javascript code here where i use dom manipulation for better user experience
+-Custom Client Side Validation is made for Create Section
 
 
 styles.css
