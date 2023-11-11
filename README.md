@@ -40,34 +40,33 @@ In terms of Distinctivenes this project is entirely different from other project
   
 This project contains about 5 models and made use of all 3 relations OnetoOne OnetoMany and ManytoMany  i have made use of relation between the models to acheive various features like for example the upvote system and i also have made use js code  for client side manipulation in most of my template so the project is quite Complex
 
-## Files Content
+## Files Conten
+Modelform for Profile Section
 
-        Modelform for Profile Section
+ -create view -The view Responsible for adding User details used in Cv
 
-        -create view -The view Responsible for adding User details used in Cv
-
-        -login,logout,register views
+-login,logout,register views
         
-        -profile view responsible for Profile section 
+-profile view responsible for Profile section 
 
-        -jobfromlink view responsible for server side api request to adzuna jobs api where i fetch the latest job openings
+-jobfromlink view responsible for server side api request to adzuna jobs api where i fetch the latest job openings
         
-        -cv This is the view where i create a Html template which i will later use in xhtml2pdf
+-cv This is the view where i create a Html template which i will later use in xhtml2pdf
 
-        -cvtopdf This view converts the Template to Pdf Format
+-cvtopdf This view converts the Template to Pdf Format
 
 
-        -list This view is used to show the list of CV submited by various users
+list This view is used to show the list of CV submited by various users
 
-        -likecv This endpoint allows to implement the like feature  in which users can upvote other users cv (made use of JsonResponse)
+likecv This endpoint allows to implement the like feature  in which users can upvote other users cv (made use of JsonResponse)
 
-        -edit This view allows users to delete thier CV after they generated a pdf that they dont like
+edit This view allows users to delete thier CV after they generated a pdf that they dont like
 
-        -sectionlist This is responsible for giving users a wide range of field teams which they can join
+sectionlist This is responsible for giving users a wide range of field teams which they can join
 
-        -join/leave section These views makes users able to join and leave sections
+        join/leave section These views makes users able to join and leave sections
         
-        -sectionusers This section shows the list of users in each section
+        sectionusers This section shows the list of users in each section
 
 
 Models.py
