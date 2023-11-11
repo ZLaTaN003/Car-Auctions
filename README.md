@@ -72,10 +72,15 @@ Views.py
 
 Models.py
          User Model
+
          Candidate model this is the model used for storing CV details of users
-         Profile Model This model is responsible for Profile details of Users 
+
+         Profile Model This model is responsible for Profile details of Users
+
          Section Model This model is responsible for creating different Fields or Teams that user can join
+
          Like Model The model that helps users to like other users CV
+         
          Signals Made Use of Django Signals to connect User and Profile Model
 
 Registered Models with admin
