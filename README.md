@@ -1,4 +1,4 @@
-#CS50 WEB PROGRAMMING FINAL PROJECT: CV SPARK
+# CS50 WEB PROGRAMMING FINAL PROJECT: CV SPARK
 
 
 This Learning Journey with CS50W was so great !.As a guy who only knew some python i got to learn many things about Django and Javascript i would first like to Thank Whole CS50W Crew
@@ -6,18 +6,18 @@ This Learning Journey with CS50W was so great !.As a guy who only knew some pyth
 
 When it came to my Final Project i was determined to make something that would be useful .. So i came to the idea of a CV generator app
 
-##APP IDEA
+## APP IDEA
 
 My App takes in User Data and converts it into a CV format which Users can download and apply to Jobs 
 
 
 
-##Libraries Used
+## Libraries Used
 
 
 xhtml2pdf i used this python library to convert html template to a pdf format
 
-##Key Features
+## Key Features
 
 -Register/Login/Logout 
 
@@ -40,7 +40,7 @@ In terms of Distinctivenes this project is entirely different from other project
   
 This project contains about 5 models and made use of all 3 relations OnetoOne OnetoMany and ManytoMany  i have made use of relation between the models to acheive various features like for example the upvote system and i also have made use js code  for client side manipulation in most of my template so the project is quite Complex
 
-##Files Content
+## Files Content
 
 Views.py
         -Modelform for Profile Section
@@ -107,7 +107,7 @@ Pictures This is the medial root of my project
    -profile_pics This is place where profilephtot that user uploads in Profile section get displayed
 
 
-##How to run the application
+## How to run the application
        Install project dependencies by running pip install -r requirements.txt
        Make and apply migrations by running python manage.py makemigrations and python manage.py migrate.
        python manage.py runserver to Run
