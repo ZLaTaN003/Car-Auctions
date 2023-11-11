@@ -34,7 +34,7 @@ xhtml2pdf i used this python library to convert html template to a pdf format
 -Jobs Sections  Here i made use of apis from both server side and from client side i used Adzuna api in my views and i added unsplash photos api to match the image with the job offered in my Javascript Code
 
 
-##Distinctiveness and Complexity
+## Distinctiveness and Complexity
 
 In terms of Distinctivenes this project is entirely different from other projects i had made. i even tried adding Django Features like Signals making use of api calls  from other websites in both server side and client side. i kept in mind of all things i had learned through the entire course and applied most of the concepts i learned in this project. i also had to do some research on the xhtml2pdf python package 
   
