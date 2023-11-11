@@ -66,22 +66,17 @@ Views.py
         -sectionlist This is responsible for giving users a wide range of field teams which they can join
 
         -join/leave section These views makes users able to join and leave sections
-
+        
         -sectionusers This section shows the list of users in each section
 
 
 Models.py
-         -User Model
-
-         -Candidate model this is the model used for storing CV details of users
-
-         -Profile Model This model is responsible for Profile details of Users 
-
-         -Section Model This model is responsible for creating different Fields or Teams that user can join
-
-         -Like Model The model that helps users to like other users CV
-
-         -Signals Made Use of Django Signals to connect User and Profile Model
+         User Model
+         Candidate model this is the model used for storing CV details of users
+         Profile Model This model is responsible for Profile details of Users 
+         Section Model This model is responsible for creating different Fields or Teams that user can join
+         Like Model The model that helps users to like other users CV
+         Signals Made Use of Django Signals to connect User and Profile Model
 
 Registered Models with admin
 
@@ -91,7 +86,6 @@ Urls.py
 
 script.js
   -Edit Feature in Profiles is Implemented through  javascript code here where i use dom manipulation for better user experience
-  
   -Custom Client Side Validation is made for Create Section
 
 
