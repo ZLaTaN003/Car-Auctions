@@ -1,4 +1,4 @@
-Car Auctions Platform with Django
+#Car Auctions Platform with Django
 
 
 
@@ -8,25 +8,25 @@ KEY FEATURES
 
 
 
--User Authentication
+##User Authentication
 
--CRUD Functionality
+##CRUD Functionality
 
    Users can create update and delete Car auction listings
 
--Bid Model
+##Bid Model
 
   Implemented a Bidding system where users can bid for thier favourite Cars
 
--Wishlist
+##Wishlist
 
   Users can Bookmark thier favourite Cars awailable in auction to a watchlist
 
--Categories
+##Categories
 
   Users can browse cars of thier choice through categories section
 
--Comments
+##Comments
 
   Implemented a comment feature where users can comment on Car auction listings 
 
@@ -34,7 +34,7 @@ KEY FEATURES
 
 
 
--Frontend
+##Frontend
 
   I made use of bootstrap example to complete the frontend of this website.
 
