@@ -34,6 +34,4 @@
 
 [Check out the live demo here](https://lnkd.in/gDE5cccb)
 
-## Source Code
 
-[GitHub Repository](https://lnkd.in/gDE5cccb)
